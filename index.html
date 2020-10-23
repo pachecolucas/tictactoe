@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: black;
+      color: white;
+    }
+
+    table {
+      margin: 0 auto;
+    }
+
+    td {
+      color: black;
+      background: pink;
+      width: 100px;
+      height: 100px;
+      font-size: 80px;
+      font-weight: bold;
+    }
+
+    td:hover {
+      background: lightpink;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My Game 2</h1>
+  <table>
+    <tr>
+      <td onclick="marcar(this)"></td>
+      <td onclick="marcar(this)"></td>
+      <td onclick="marcar(this)"></td>
+    </tr>
+    <tr>
+      <td onclick="marcar(this)"></td>
+      <td onclick="marcar(this)"></td>
+      <td onclick="marcar(this)"></td>
+    </tr>
+    <tr>
+      <td onclick="marcar(this)"></td>
+      <td onclick="marcar(this)"></td>
+      <td onclick="marcar(this)"></td>
+    </tr>
+  </table>
+  <script>
+    let jogador = 1;
+
+    function marcar(c) {
+      if (jogador == 1) {
+        c.innerText = "X"
+        jogador = 2
+      } else {
+        c.innerText = "O"
+        jogador = 1
+      }
+    }
+  </script>
+</body>
+
+</html>
